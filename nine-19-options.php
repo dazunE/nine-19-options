@@ -37,6 +37,7 @@ if ( ! defined( 'WPINC' ) ) {
 function activate_nine_19_options() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-nine-19-options-activator.php';
 	Nine_19_Options_Activator::activate();
+
 }
 
 /**
