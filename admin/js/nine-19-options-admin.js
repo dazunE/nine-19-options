@@ -29,4 +29,13 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+	 $(function(){
+	 	
+	 	var div = $('#homepage .rwmb-field');
+
+	 	for ( var i = 0 ; i < div.lenght ; i ++ ){
+	 		div.slice(i, i + 4).wrapAll('<div class="slider-section"></div>');
+	 	}
+	 });
+
 })( jQuery );
