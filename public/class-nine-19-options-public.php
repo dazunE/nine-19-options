@@ -101,9 +101,6 @@ class Nine_19_Options_Public {
 	}
 
 
-	public function nineteen_slider_front() {
-
-
-	}
+	
 
 }

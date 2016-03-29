@@ -3,6 +3,126 @@
  * included in this file.
  */
 
- .toplevel_page_nineteen-options .options-wrap{
-	
+ .rwmb-text  , .rwmb-textarea{
+ 	display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
  }
+
+.option-panel{
+    position: relative;
+    overflow: auto;
+    margin: 16px 0;
+    padding: 23px 10px 0;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+    background: #fff;
+    font-size: 13px;
+    line-height: 2.1em;
+}
+
+.option-panel h1{
+	margin: 0 10px;
+	    text-transform: uppercase;
+    color: rgba(0,0,0,.54);
+}
+
+.option-panel h1::before{
+	content: "\f108";
+    display: inline-block;
+    width: 50px;
+    height: 36px;
+    font-size: 36px;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: 400;
+    color: #4285f4;
+    font-style: normal;
+    vertical-align: top;
+    text-align: left;
+    -webkit-transition: color .1s ease-in 0;
+    transition: color .1s ease-in 0;
+    -webkit-font-smoothing: antialiased
+}
+
+.section-wrap{
+
+	padding: 15px;
+}
+
+.option-panel .nav-tab-wrapper{
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 48px;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.option-panel .nav-tab-wrapper .nav-tab{
+	margin: 0;
+    border: none;
+    padding: 0 24px;
+    float: left;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.54);
+    overflow: hidden;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.option-panel .nav-tab-wrapper .nav-tab-active{
+	color: rgba(0,0,0,.87);
+	border-bottom: 2px solid #4285f4;
+}
+
+.option-panel .button-primary {
+	background:  #4285f4;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    position: relative;
+    height: 36px;
+    margin: 0;
+    min-width: 64px;
+    padding: 0 16px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    overflow: hidden;
+    will-change: box-shadow;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+}

@@ -10,7 +10,7 @@
  * @since      1.0.0
  *
  * @package    Nine_19_Options
- * @subpackage Nine_19_Options/includes
+ * @subpackage ninteen_options/includes
  */
 
 /**
@@ -23,8 +23,8 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Nine_19_Options
- * @subpackage Nine_19_Options/includes
+ * @package    ninteen_options
+ * @subpackage ninteen_options/includes
  * @author     Dasun Edirisinghe <dazunj4me@gmail.com>
  */
 class Nine_19_Options {
@@ -35,7 +35,7 @@ class Nine_19_Options {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Nine_19_Options_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      ninteen_options_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -83,10 +83,10 @@ class Nine_19_Options {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Nine_19_Options_Loader. Orchestrates the hooks of the plugin.
-	 * - Nine_19_Options_i18n. Defines internationalization functionality.
-	 * - Nine_19_Options_Admin. Defines all hooks for the admin area.
-	 * - Nine_19_Options_Public. Defines all hooks for the public side of the site.
+	 * - ninteen_options_Loader. Orchestrates the hooks of the plugin.
+	 * - ninteen_options_i18n. Defines internationalization functionality.
+	 * - ninteen_options_Admin. Defines all hooks for the admin area.
+	 * - ninteen_options_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -126,7 +126,7 @@ class Nine_19_Options {
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Nine_19_Options_i18n class in order to set the domain and to register the hook
+	 * Uses the ninteen_options_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -152,8 +152,11 @@ class Nine_19_Options {
 		$plugin_admin = new Nine_19_Options_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_menu' ,$plugin_admin , 'option_admin_page' );
+		$this->loader->add_action( 'admin_menu' ,$plugin_admin , 'option_admin_sub_menu');
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'init', $plugin_admin , 'ninteen_custom_post_types' );
+		$this->loader->add_action( 'admin_init' , $plugin_admin , 'nineteen_register_settings');
 
 
 
@@ -173,6 +176,7 @@ class Nine_19_Options {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+	
 
 	}
 
