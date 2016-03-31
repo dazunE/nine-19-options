@@ -119,6 +119,9 @@ class Nine_19_Options {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-nine-19-options-public.php';
 
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tgm-plugin-activation.php';
+
 		$this->loader = new Nine_19_Options_Loader();
 
 	}
@@ -157,6 +160,7 @@ class Nine_19_Options {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'init', $plugin_admin , 'ninteen_custom_post_types' );
 		$this->loader->add_action( 'admin_init' , $plugin_admin , 'nineteen_register_settings');
+		$this->loader->add_action( 'tgmpa_register' ,$plugin_admin ,'ninteen_required_plugins' );
 
 
 
