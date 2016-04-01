@@ -228,18 +228,21 @@ class Nine_19_Options_Admin {
 	            'force_deactivation' => false,
 	        ),
 
+
 	    );
 
 	    $config  = array(
 
-	        'domain'           => 'glamo',
-	        'default_path'     => '',
-	        'parent_menu_slug' => 'themes.php',
-	        'parent_url_slug'  => 'themes.php',
-	        'menu'             => 'install-required-plugins',
-	        'has_notices'      => true,
-	        'is_automatic'     => false,
-	        'message'          => '',
+		    'id'           => 'tgmpa',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+			'default_path' => '',                      // Default absolute path to bundled plugins.
+			'menu'         => 'tgmpa-install-plugins', // Menu slug.
+			'parent_slug'  => 'themes.php',            // Parent menu slug.
+			'capability'   => 'edit_theme_options',    //
+			'has_notices'  => true,                    // Show admin notices or not.
+			'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+			'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+			'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+			'message'      => '',
 	        'strings'          => array(
 	            'page_title'                      => __( 'Install Required Plugins', 'glamo' ),
 	            'menu_title'                      => __( 'Install Plugins', 'glamo' ),
