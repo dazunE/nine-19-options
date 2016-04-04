@@ -227,14 +227,6 @@ class Nine_19_Options_Admin {
 	            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 				'force_deactivation' => false
 	        ),
-	        array(
-
-	        	'name' 				 => 'Contact Form 7',
-	        	'slug'				 => 'contact-form-7',
-	        	'required'			 => true,
-	        	'force_activation' 	 => true,
-	        	'force_deactivation' => false,
-	        )
 
 
 	    );
