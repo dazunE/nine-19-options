@@ -224,9 +224,17 @@ class Nine_19_Options_Admin {
 	            'name'               => 'Meta Box',
 	            'slug'               => 'meta-box',
 	            'required'           => true,
-	            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-				'force_deactivation' => false
+	            'force_activation'   => flase,
+	            'force_deactivation' => false,
 	        ),
+	        array(
+
+	        	'name' 				 => 'Contact Form 7',
+	        	'slug'				 => 'contact-form-7',
+	        	'required'			 => true,
+	        	'force_activation' 	 => flase,
+	        	'force_deactivation' => false,
+	        )
 
 
 	    );
@@ -237,20 +245,12 @@ class Nine_19_Options_Admin {
 			'default_path' => '',                      // Default absolute path to bundled plugins.
 			'menu'         => 'tgmpa-install-plugins', // Menu slug.
 			'parent_slug'  => 'themes.php',            // Parent menu slug.
-<<<<<<< Updated upstream
 			'capability'   => 'edit_theme_options',    //
-=======
-			'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
->>>>>>> Stashed changes
 			'has_notices'  => true,                    // Show admin notices or not.
 			'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 			'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
 			'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-<<<<<<< Updated upstream
 			'message'      => '',
-=======
-			'message'      => '', 
->>>>>>> Stashed changes
 	        'strings'          => array(
 	            'page_title'                      => __( 'Install Required Plugins', 'glamo' ),
 	            'menu_title'                      => __( 'Install Plugins', 'glamo' ),
